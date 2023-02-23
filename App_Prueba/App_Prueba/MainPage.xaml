@@ -1,24 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App_Prueba.viewModels"
              x:Class="App_Prueba.MainPage">
 
+    <ContentPage.BindingContext>
+        <local:viewModelExpresion></local:viewModelExpresion>
+    </ContentPage.BindingContext>
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <Entry Text="{Binding Num1}" Keyboard="Numeric" Placeholder="Escriba un valor numerico" />
+        <Entry Text="{Binding Num2}" Keyboard="Numeric" Placeholder="Escriba un valor numerico" />
+        <Button Command="{Binding sumar}" Text="Sumar" />
+        <Button Command="{Binding restar}" Text="Restar" />
+        <Label Text="{Binding Msj}" HorizontalTextAlignment="Center"></Label>
     </StackLayout>
 
 </ContentPage>
