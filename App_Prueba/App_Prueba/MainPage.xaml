@@ -12,6 +12,8 @@
         <Entry Text="{Binding Num2}" Keyboard="Numeric" Placeholder="Escriba un valor numerico" />
         <Button Command="{Binding sumar}" Text="Sumar" />
         <Button Command="{Binding restar}" Text="Restar" />
+        <Button Command="{Binding multiplicar}" Text="Multiplicar"></Button>
+        <Button Command="{Binding dividir}" Text="Dividir"></Button>
         <Label Text="{Binding Msj}" HorizontalTextAlignment="Center"></Label>
     </StackLayout>
 

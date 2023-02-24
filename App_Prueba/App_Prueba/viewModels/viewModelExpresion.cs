@@ -33,6 +33,26 @@ namespace App_Prueba.viewModels
                 };
                 Msj = expresion.restar();
             });
+
+            multiplicar = new Command(() =>
+            {
+                Expresion expresion = new Expresion()
+                {
+                    num1 = this.num1,
+                    num2 = this.num2,
+                };
+                Msj = expresion.multiplicar();
+            });
+
+            dividir = new Command(() =>
+            {
+                Expresion expresion = new Expresion()
+                {
+                    num1 = this.num1,
+                    num2 = this.num2,
+                };
+                Msj = expresion.dividir();
+            });
         }
 
 
@@ -70,6 +90,8 @@ namespace App_Prueba.viewModels
 
         public Command sumar { get; }
         public Command restar { get; }
+        public Command multiplicar { get; }
+        public Command dividir { get; }
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

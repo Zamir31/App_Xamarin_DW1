@@ -24,5 +24,17 @@ namespace App_Prueba.Models
             resultado = num1 - num2;
             return resultado.ToString();
         }
+
+        public string multiplicar()
+        {
+            resultado = num1 * num2;
+            return resultado.ToString();
+        }
+
+        public string dividir()
+        {
+            resultado = num1 / num2;
+            return resultado.ToString();
+        }
     }
 }
